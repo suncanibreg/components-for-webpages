@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(33, 107, 14);
+  color: rgb(218, 130, 75);
+}
+
+.Introduction {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+/* navbar1*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 180px;
+  border: 0.01px solid rgb(83, 48, 15);
+  border-radius: 7px;
+  background: orange linear linear-gradient();
+}
+
+ul li {
+  margin: 4px;
+  background-color: rgb(50, 73, 51);
+  border-radius: 6px;
+  border: 1px solid salmon;
+}
+
+li a {
+  display: block;
+  padding: 10px 18px;
+  color: antiquewhite;
+  background-color: rgb(50, 73, 51);
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+
+li a.active {
+  color: #668353;
+  background-color: antiquewhite;
+}
+
+li a:hover:not(.active) {
+  color: #668353;
+  background-color: antiquewhite;
+}
+
+/* navbar2*/
+ul.sideNavbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
+  position: relative;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(136, 165, 9, 0.3);
+  border-color: rgb(33, 107, 14);
+}
+
+ul.sideNavbar li a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: azure;
+}
+
+ul.sideNavbar li a.active2 {
+  background-color: aliceblue;
+  color: darkgreen;
+}
+
+ul.sideNavbar li a:hover:not(.active2) {
+  color: brown;
+  background-color: aliceblue;
+}
+
+div.nextToSideNav {
+  margin-left: 30px;
+  padding: 2px 15px;
+  height: fit-content;
+  width: 50%;
+}
+
+@media screen and (max-width: 780px) {
+  ul.sideNavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  ul.sideNavbar li {
+    width: 100px;
+  }
+
+  ul.sideNavbar li a {
+    padding: 12px;
+  }
+
+  div.nextToSideNav {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  ul.sideNavbar {
+    width: 70%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 30px;
+  }
+
+  ul.sideNavbar li {
+    width: 70%;
+  }
+
+  ul.sideNavbar li a {
+    text-align: center;
+  }
+}
+
+/* ostalo od default kada je next.js kreirao projekat.
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+*/
